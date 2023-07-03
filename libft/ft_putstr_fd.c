@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2023/02/05 19:54:37 by hsirenko          #+#    #+#             */
+/*   Updated: 2023/02/05 20:13:44 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-//#include "ft_printf.h"
-//#include "libft.h"
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}
 
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
+/*int	main(void)
+{
+	char *str = "cat";
+	int fd;
 
-
-
-#endif
+	char *result = ft_putstr_fd(str, fd);
+	printf("%s", result);
+}*/

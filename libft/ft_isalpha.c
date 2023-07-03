@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2022/11/30 18:02:33 by hsirenko          #+#    #+#             */
+/*   Updated: 2023/01/03 18:53:19 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-//#include "ft_printf.h"
-//#include "libft.h"
-
-#include <unistd.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include <stdio.h>
+#include <unistd.h>
+#include "libft.h"
 
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
+int	ft_isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
 
-
-
-#endif
+/*int	main(void)
+{
+	char c = 'Q';
+	printf("Result of alpha character is %i\n", ft_isalpha(c));
+	printf("Result of alpha character is %i\n", isalpha(c));
+}*/

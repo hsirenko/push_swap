@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2022/12/21 14:12:58 by hsirenko          #+#    #+#             */
+/*   Updated: 2023/01/03 18:48:44 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-//#include "ft_printf.h"
-//#include "libft.h"
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char	*dest1;
+	unsigned char	*src1;
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
-
-
-
-#endif
+	dest1 = dest;
+	src1 = ((unsigned char *)src);
+	if (dest < src)
+		return (ft_memcpy(dest, src, n));
+	if (dest > src)
+		while (n--)
+			dest1[n] = src1[n];
+	return (dest);
+}

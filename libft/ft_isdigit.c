@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2022/12/02 19:56:29 by hsirenko          #+#    #+#             */
+/*   Updated: 2023/02/06 17:07:19 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include<stdio.h>
 
-//#include "ft_printf.h"
-//#include "libft.h"
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+/*int main(void)
+{
+	int c = 5;
 
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
-
-
-
-#endif
+	printf("%d", ft_isdigit(c));
+	return (0);
+}*/

@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2023/02/04 19:41:38 by hsirenko          #+#    #+#             */
+/*   Updated: 2023/02/05 19:53:41 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-//#include "ft_printf.h"
-//#include "libft.h"
-
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
-
-
-
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

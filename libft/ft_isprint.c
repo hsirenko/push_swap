@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsirenko <hsirenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:06:22 by helensirenk       #+#    #+#             */
-/*   Updated: 2023/06/29 22:03:08 by hsirenko         ###   ########.fr       */
+/*   Created: 2022/12/05 19:34:17 by helensirenk       #+#    #+#             */
+/*   Updated: 2022/12/29 13:34:21 by hsirenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-//#include "ft_printf.h"
-//#include "libft.h"
-
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
-/* push_swap.c*/
-void several_digits(char arr[], int size);
-void single_char_list(char **arr, int size);
-void max_min(char arr_num[], int size);
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}
 
-
-
-#endif
+/*int	main(void)
+{
+	int c = 'f';
+	int b = '\n';
+	printf("%i\n", ft_isprint(c));
+	printf("%i\n", ft_isprint(b));
+}*/
